@@ -3,7 +3,11 @@ defmodule CharCounter do
   def count_chars do
     ask_input
     |> create_message
-    |> IO.puts
+    |> output_message
+  end
+
+  defp output_message(message) do
+    IO.puts(message)
   end
 
   defp create_message(string) do
