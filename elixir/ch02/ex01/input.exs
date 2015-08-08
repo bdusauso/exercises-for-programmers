@@ -10,7 +10,14 @@ defmodule Greeter do
 
   def sanitize_input(input), do: String.strip(input)
 
-  def create_greet_message(name), do: "Hello, #{name}, nice to meet you!"
+  def create_greet_message(name) do
+    cond do
+      name =~ ~r/^B.*$/ 
+        -> "Hello, #{name}, nice to meet you!"
+      _name 
+        -> "Hello, beautiful stranger!" 
+    end
+  end
 
   def greet(name), do: IO.puts(name)
 end
