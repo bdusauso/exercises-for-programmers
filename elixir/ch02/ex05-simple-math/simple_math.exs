@@ -20,4 +20,6 @@ SimpleMath.prompt(:second) |> IO.write
   &SimpleMath.minus/2,
   &SimpleMath.times/2,
   &SimpleMath.div/2,
-] |> Enum.each(fn fun -> IO.puts apply(fun,[first, second]) end)
+] |> Enum.map(&(&1.(first, second)))
+  |> Enum.join("\n")
+  |> IO.puts
