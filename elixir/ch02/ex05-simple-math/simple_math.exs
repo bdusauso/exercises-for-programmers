@@ -2,10 +2,10 @@ defmodule SimpleMath do
 
   def prompt(count), do: "What is the #{count} number ? "
 
-  def plus(a, b), do: "#{a} + #{b} = #{a + b}"
+  def plus(a, b),  do: "#{a} + #{b} = #{a + b}"
   def minus(a, b), do: "#{a} - #{b} = #{a - b}"
   def times(a, b), do: "#{a} * #{b} = #{a * b}"
-  def div(a, b), do: "#{a} / #{b} = #{round(a / b)}"
+  def div(a, b),   do: "#{a} / #{b} = #{round(a / b)}"
 
 end
 
