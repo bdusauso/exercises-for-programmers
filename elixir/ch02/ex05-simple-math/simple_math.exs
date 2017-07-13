@@ -1,6 +1,6 @@
 defmodule SimpleMath do
 
-  def prompt(count), do: IO.write "What is the #{count} number ? "
+  def prompt(count), do: "What is the #{count} number ? "
 
   def plus(a, b), do: "#{a} + #{b} = #{a + b}"
   def minus(a, b), do: "#{a} - #{b} = #{a - b}"
@@ -9,10 +9,10 @@ defmodule SimpleMath do
 
 end
 
-SimpleMath.prompt(:first)
+SimpleMath.prompt(:first) |> IO.write
 {first, _} = IO.read(:stdio, :line) |> Integer.parse
 
-SimpleMath.prompt(:second)
+SimpleMath.prompt(:second) |> IO.write
 {second, _} = IO.read(:stdio, :line) |> Integer.parse
 
 [
